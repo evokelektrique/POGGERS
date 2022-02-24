@@ -1,4 +1,8 @@
 <?php
 require_once __DIR__ . "/../vendor/autoload.php";
 
-new TwitchEmoteCounter\TwitchEmoteCounter();
+use TwitchEmoteCounter\EmoteProviders\BTTV;
+
+// List of BTTV Emotes
+$bttv = new BTTV;
+$list = $bttv->list();
