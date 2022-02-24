@@ -1,0 +1,17 @@
+{
+    "name": "evokelektrique/twitch-emote-counter",
+    "description": "Simply get stats of your chat",
+    "authors": [
+        {
+            "name": "Evoke",
+            "email": "evoke.lektrique@gmail.com"
+        }
+    ],
+    "require": {
+        "robmorgan/phinx": "^0.12.10",
+        "symfony/yaml": "^5.4"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}

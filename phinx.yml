@@ -1,0 +1,35 @@
+paths:
+    migrations: '%%PHINX_CONFIG_DIR%%/db/migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/db/seeds'
+
+environments:
+    default_migration_table: phinxlog
+    default_environment: development
+    production:
+        adapter: pgsql
+        host: localhost
+        name: twitch_emote_counter_production_db
+        user: root
+        pass: toor
+        port: 5432
+        charset: utf8
+
+    development:
+        adapter: pgsql
+        host: localhost
+        name: twitch_emote_counter_development_db
+        user: root
+        pass: ''
+        port: 5432
+        charset: utf8
+
+    testing:
+        adapter: pgsql
+        host: localhost
+        name: twitch_emote_counter_testing_db
+        user: root
+        pass: ''
+        port: 5432
+        charset: utf8
+
+version_order: creation
