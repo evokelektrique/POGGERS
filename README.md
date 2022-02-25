@@ -2,30 +2,30 @@
 Simply get stats of your chat
 
 ## Usage
-```php
-use TwitchEmoteCounter\EmoteProviders\BTTV;
+A brief description of API usage , for more examples see click <a href="https://github.com/evokelektrique/twitch-emote-counter/tree/master/examples">here</a>.
 
-// List BTTV emotes
-$bttv = new BTTV;
+### Emotes
+```php
+require_once __DIR__ . "/vendor/autoload.php";
+
+$path = __DIR__; // Current directory
+$twitch = new TwitchEmoteCounter\Twitch($path);
+
+// Get user info
+$username = "forsen";
+$user = TwitchEmoteCounter\User::get($username);
+$user_id = $user[0]["id"];
+
+// List Global Emotes
+$global = new TwitchEmoteCounter\EmoteProviders\GlobalEmotes;
+$list = $global->list();
+
+// List Channel Emotes
+$user_id = "22484632";
+$channel = new TwitchEmoteCounter\EmoteProviders\ChannelEmotes;
+$list = $channel->list($user_id);
+
+// List BTTV Emotes
+$bttv = new TwitchEmoteCounter\EmoteProviders\BTTV;
 $list = $bttv->list();
-var_dump($list[0]);
-// array(5) {
-//   ["id"]=>
-//   string(24) "54fa8f1401e468494b85b537"
-//   ["code"]=>
-//   string(4) ":tf:"
-//   ["imageType"]=>
-//   string(3) "png"
-//   ["userId"]=>
-//   string(24) "5561169bd6b9d206222a8c19"
-//   ["images"]=>
-//   array(3) {
-//     [0]=>
-//     string(59) "https://cdn.betterttv.net/emote/54fa8f1401e468494b85b537/1x"
-//     [1]=>
-//     string(59) "https://cdn.betterttv.net/emote/54fa8f1401e468494b85b537/2x"
-//     [2]=>
-//     string(59) "https://cdn.betterttv.net/emote/54fa8f1401e468494b85b537/3x"
-//   }
-// }
 ```
