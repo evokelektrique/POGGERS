@@ -9,7 +9,8 @@
     ],
     "require": {
         "robmorgan/phinx": "^0.12.10",
-        "symfony/yaml": "^5.4"
+        "symfony/yaml": "^5.4",
+        "vlucas/phpdotenv": "^5.4"
     },
     "autoload": {
         "classmap": ["src/"]

@@ -4,29 +4,33 @@ namespace TwitchEmoteCounter\EmoteProviders;
 use TwitchEmoteCounter\EmoteProvider;
 
 /**
- * Main BTTV emote provider class
+ * Main BTTV emotes provider class
  */
 class BTTV extends EmoteProvider {
-    const GLOBAL_URL = "https://api.betterttv.net/3/cached/emotes/global";
+    const BASE_URL = "https://api.betterttv.net/3/cached/emotes/global";
 
-    protected function get_emote_images(array $emote): array {
+    protected function get_emote_urls(array $emote): array {
         $id = $emote["id"];
-        $images = [
-            "https://cdn.betterttv.net/emote/$id/1x",
-            "https://cdn.betterttv.net/emote/$id/2x",
+        $urls = [
             "https://cdn.betterttv.net/emote/$id/3x",
+            "https://cdn.betterttv.net/emote/$id/2x",
+            "https://cdn.betterttv.net/emote/$id/1x",
         ];
 
-        return ["images" => $images];
+        return $urls;
     }
 
-    protected function get(): array {
-        $result = file_get_contents(self::GLOBAL_URL);
+    protected function get(int $user_id = 0): array {
+        $result = file_get_contents(self::BASE_URL);
         $json = json_decode($result, true);
         $emotes = [];
 
         foreach($json as $emote) {
-            $emotes[] = array_merge($emote, $this->get_emote_images($emote));
+            $urls = $this->get_emote_urls($emote);
+            $emotes[] = [
+                "name" => $emote["code"],
+                "urls" => $urls,
+            ];
         }
 
         return $emotes;

@@ -1,8 +1,10 @@
 <?php
 namespace TwitchEmoteCounter;
 
-class TwitchEmoteCounter {
-	public function __construct() {
-		echo "Hello World";
+use TwitchEmoteCounter\Auth;
+
+class Twitch {
+	public function __construct(string $path) {
+        new Auth($path);
 	}
 }
