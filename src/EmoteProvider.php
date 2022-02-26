@@ -1,5 +1,5 @@
 <?php
-namespace TwitchEmoteCounter;
+namespace POGGERS;
 
 /**
  * Base class for emote providers

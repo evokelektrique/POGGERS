@@ -1,5 +1,5 @@
 <?php
-namespace TwitchEmoteCounter;
+namespace POGGERS;
 
 /**
  * Authentication class

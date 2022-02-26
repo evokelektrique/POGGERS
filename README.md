@@ -9,27 +9,27 @@ A brief description of API usage , for more examples see click <a href="https://
 require_once __DIR__ . "/vendor/autoload.php";
 
 $path = __DIR__; // Current directory
-$twitch = new TwitchEmoteCounter\Twitch($path);
+$twitch = new POGGERS\Twitch($path);
 
 // Get user info
 $username = "forsen";
-$user = TwitchEmoteCounter\User::get($username);
+$user = POGGERS\User::get($username);
 $user_id = $user[0]["id"];
 
 // List Global Emotes
-$global = new TwitchEmoteCounter\EmoteProviders\GlobalEmotes;
+$global = new POGGERS\EmoteProviders\GlobalEmotes;
 $list = $global->list();
 
 // List Channel Emotes
 $user_id = "22484632";
-$channel = new TwitchEmoteCounter\EmoteProviders\ChannelEmotes;
+$channel = new POGGERS\EmoteProviders\ChannelEmotes;
 $list = $channel->list($user_id);
 
 // List BTTV Emotes
-$bttv = new TwitchEmoteCounter\EmoteProviders\BTTV;
+$bttv = new POGGERS\EmoteProviders\BTTV;
 $list = $bttv->list();
 
 // List FFZ emotes of a channel
-$bttv = new TwitchEmoteCounter\EmoteProviders\FFZ;
+$bttv = new POGGERS\EmoteProviders\FFZ;
 $list = $bttv->list($user_id);
 ```

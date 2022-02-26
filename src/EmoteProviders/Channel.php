@@ -1,7 +1,7 @@
 <?php
-namespace TwitchEmoteCounter\EmoteProviders;
+namespace POGGERS\EmoteProviders;
 
-use TwitchEmoteCounter\EmoteProvider;
+use POGGERS\EmoteProvider;
 
 /**
  * Main channel emotes provider class

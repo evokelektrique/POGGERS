@@ -1,7 +1,7 @@
 <?php
-namespace TwitchEmoteCounter;
+namespace POGGERS;
 
-use TwitchEmoteCounter\Auth;
+use POGGERS\Auth;
 
 class Twitch {
 	public function __construct(string $path) {

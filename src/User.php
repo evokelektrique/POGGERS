@@ -1,5 +1,5 @@
 <?php
-namespace TwitchEmoteCounter;
+namespace POGGERS;
 // user:read:email
 class User {
 
