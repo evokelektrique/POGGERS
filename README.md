@@ -1,5 +1,10 @@
-# twitch-emote-counter
-Simply get stats of your chat
+<div align="center">
+    <img height="74" src="https://user-images.githubusercontent.com/53313989/155836895-f5721247-1a9f-4cc0-9705-362df3734455.png"/>
+    <br>
+    <b>Simply get stats of your chat</b>
+    <br>
+    <br>
+</div>
 
 ## Usage
 A brief description of API usage , for more examples see click <a href="https://github.com/evokelektrique/POGGERS/tree/master/examples">here</a>.
