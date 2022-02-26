@@ -2,7 +2,7 @@
 Simply get stats of your chat
 
 ## Usage
-A brief description of API usage , for more examples see click <a href="https://github.com/evokelektrique/twitch-emote-counter/tree/master/examples">here</a>.
+A brief description of API usage , for more examples see click <a href="https://github.com/evokelektrique/POGGERS/tree/master/examples">here</a>.
 
 ### Emotes
 ```php
