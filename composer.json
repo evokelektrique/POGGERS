@@ -1,6 +1,7 @@
 {
     "name": "evokelektrique/poggers",
     "description": "Simply get stats of your chat",
+    "license": "MIT",
     "authors": [
         {
             "name": "Evoke",
