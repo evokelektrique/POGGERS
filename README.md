@@ -28,4 +28,8 @@ $list = $channel->list($user_id);
 // List BTTV Emotes
 $bttv = new TwitchEmoteCounter\EmoteProviders\BTTV;
 $list = $bttv->list();
+
+// List FFZ emotes of a channel
+$bttv = new TwitchEmoteCounter\EmoteProviders\FFZ;
+$list = $bttv->list($user_id);
 ```
