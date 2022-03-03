@@ -12,6 +12,6 @@ class Auth {
     protected function load_env(string $path) {
         $dotenv = \Dotenv\Dotenv::createImmutable($path);
         $dotenv->load();
-        $dotenv->required(['CLIENT_ID', 'OAUTH_TOKEN', 'DSN'])->notEmpty();
+        $dotenv->required(['CLIENT_ID', 'OAUTH_TOKEN'])->notEmpty();
     }
 }
